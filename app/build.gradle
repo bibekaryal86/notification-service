@@ -8,8 +8,8 @@
 
 buildscript {
     dependencies {
-        classpath 'org.yaml:snakeyaml:2.4'
-        classpath 'org.flywaydb:flyway-database-postgresql:11.8.2'
+        classpath 'org.yaml:snakeyaml:2.5'
+        classpath 'org.flywaydb:flyway-database-postgresql:11.13.3'
     }
 }
 
@@ -17,7 +17,7 @@ plugins {
     id 'application'
     id 'java'
     id 'com.diffplug.spotless' version '8.0.0'
-    id 'org.flywaydb.flyway' version '11.13.2'
+    id 'org.flywaydb.flyway' version '11.13.3'
 }
 
 java {
@@ -44,7 +44,7 @@ dependencies {
     implementation 'ch.qos.logback:logback-classic:1.5.18'
     runtimeOnly 'org.postgresql:postgresql:42.7.7'
 
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.12.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:6.0.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.12.2'
     testImplementation 'org.mockito:mockito-core:5.18.0'
 }
