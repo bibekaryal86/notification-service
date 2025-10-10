@@ -17,7 +17,7 @@ plugins {
     id 'application'
     id 'java'
     id 'com.diffplug.spotless' version '8.0.0'
-    id 'org.flywaydb.flyway' version '11.13.3'
+    id 'org.flywaydb.flyway' version '11.14.0'
 }
 
 java {
@@ -35,7 +35,7 @@ repositories {
 
 dependencies {
     // from personal library
-    implementation 'io.github.bibekaryal86:shdsvc:1.0.4'
+    implementation 'io.github.bibekaryal86:shdsvc:1.0.6'
     // others
     implementation 'io.netty:netty-all:4.1.119.Final'
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.19.0'
@@ -45,7 +45,7 @@ dependencies {
     runtimeOnly 'org.postgresql:postgresql:42.7.7'
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:6.0.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.12.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:6.0.0'
     testImplementation 'org.mockito:mockito-core:5.18.0'
 }
 
