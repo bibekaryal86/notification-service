@@ -9,6 +9,7 @@ public class EmailRequest implements Serializable {
   private final String subject;
   private final String htmlBody;
   private final String textBody;
+  private final String emailFromName;
   private final EmailRequestRecipients emailRequestRecipients;
   private final List<EmailRequestAttachment> emailRequestAttachments;
 
@@ -17,11 +18,13 @@ public class EmailRequest implements Serializable {
       @JsonProperty("subject") final String subject,
       @JsonProperty("htmlBody") final String htmlBody,
       @JsonProperty("textBody") final String textBody,
+      @JsonProperty("emailFromName") final String emailFromName,
       @JsonProperty("recipients") final EmailRequestRecipients emailRequestRecipients,
       @JsonProperty("attachments") final List<EmailRequestAttachment> emailRequestAttachments) {
     this.subject = subject;
     this.htmlBody = htmlBody;
     this.textBody = textBody;
+    this.emailFromName = emailFromName;
     this.emailRequestRecipients = emailRequestRecipients;
     this.emailRequestAttachments = emailRequestAttachments;
   }
@@ -38,6 +41,10 @@ public class EmailRequest implements Serializable {
     return textBody;
   }
 
+  public String getEmailFromName() {
+    return emailFromName;
+  }
+
   public EmailRequestRecipients getEmailRequestRecipients() {
     return emailRequestRecipients;
   }
@@ -52,12 +59,14 @@ public class EmailRequest implements Serializable {
         + "subject='"
         + subject
         + '\''
-        + ", htmlBody='"
-        + (htmlBody == null || htmlBody.trim().isEmpty())
+        + ", isHtmlBodyIncluded='"
+        + (htmlBody != null && !htmlBody.trim().isEmpty())
         + '\''
-        + ", textBody='"
-        + (textBody == null || textBody.trim().isEmpty())
+        + ", isTextBodyIncluded='"
+        + (textBody != null && !textBody.trim().isEmpty())
         + '\''
+        + ", emailFromName="
+        + emailFromName
         + ", emailRequestRecipients="
         + emailRequestRecipients
         + ", emailRequestAttachments="
