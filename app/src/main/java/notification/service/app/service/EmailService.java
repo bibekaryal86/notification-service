@@ -12,6 +12,7 @@ import jakarta.mail.internet.InternetAddress;
 import jakarta.mail.internet.MimeBodyPart;
 import jakarta.mail.internet.MimeMessage;
 import jakarta.mail.internet.MimeMultipart;
+import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 import java.util.Properties;
@@ -54,7 +55,17 @@ public class EmailService {
 
     // Set From address
     if (!CommonUtilities.isEmpty(this.smtpEmail)) {
-      message.setFrom(new InternetAddress(this.smtpEmail));
+      if (!CommonUtilities.isEmpty(emailRequest.getEmailFromName())) {
+        try {
+          message.setFrom(
+              new InternetAddress(
+                  this.smtpEmail, emailRequest.getEmailFromName(), StandardCharsets.UTF_8.name()));
+        } catch (UnsupportedEncodingException ignored) {
+          message.setFrom(new InternetAddress(this.smtpEmail));
+        }
+      } else {
+        message.setFrom(new InternetAddress(this.smtpEmail));
+      }
     }
 
     // Set recipients
