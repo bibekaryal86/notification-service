@@ -35,7 +35,7 @@ repositories {
 
 dependencies {
     // from personal library
-    implementation 'io.github.bibekaryal86:shdsvc:1.0.8'
+    implementation 'io.github.bibekaryal86:shdsvc:1.0.9'
     // others
     implementation 'io.netty:netty-all:4.1.119.Final'
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.19.0'
@@ -115,7 +115,6 @@ flyway {
     locations = ['classpath:db/migration']
     schemas = ['public']
 
-    // for local development, use SANDBOX DB
     def db_host = yamlProperties.getProperty('DB_HOST')
     def db_name = yamlProperties.getProperty('DB_NAME')
 
