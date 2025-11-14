@@ -9,7 +9,7 @@
 buildscript {
     dependencies {
         classpath 'org.yaml:snakeyaml:2.5'
-        classpath 'org.flywaydb:flyway-database-postgresql:11.15.0'
+        classpath 'org.flywaydb:flyway-database-postgresql:11.17.0'
     }
 }
 
@@ -41,7 +41,7 @@ dependencies {
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.20.1'
     implementation 'com.sun.mail:jakarta.mail:2.0.2'
     implementation 'org.slf4j:slf4j-api:2.0.17'
-    implementation 'ch.qos.logback:logback-classic:1.5.18'
+    implementation 'ch.qos.logback:logback-classic:1.5.21'
     runtimeOnly 'org.postgresql:postgresql:42.7.8'
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:6.0.1'
