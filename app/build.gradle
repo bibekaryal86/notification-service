@@ -17,7 +17,7 @@ plugins {
     id 'application'
     id 'java'
     id 'com.diffplug.spotless' version '8.1.0'
-    id 'org.flywaydb.flyway' version '11.20.0'
+    id 'org.flywaydb.flyway' version '11.20.1'
 }
 
 java {
