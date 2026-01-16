@@ -17,7 +17,7 @@ plugins {
     id 'application'
     id 'java'
     id 'com.diffplug.spotless' version '8.1.0'
-    id 'org.flywaydb.flyway' version '11.20.1'
+    id 'org.flywaydb.flyway' version '11.20.2'
 }
 
 java {
@@ -41,7 +41,7 @@ dependencies {
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.20.1'
     implementation 'com.sun.mail:jakarta.mail:2.0.2'
     implementation 'org.slf4j:slf4j-api:2.0.17'
-    implementation 'ch.qos.logback:logback-classic:1.5.23'
+    implementation 'ch.qos.logback:logback-classic:1.5.24'
     runtimeOnly 'org.postgresql:postgresql:42.7.8'
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:6.0.2'
