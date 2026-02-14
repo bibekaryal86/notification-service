@@ -42,7 +42,7 @@ dependencies {
     implementation 'com.sun.mail:jakarta.mail:2.0.2'
     implementation 'org.slf4j:slf4j-api:2.0.17'
     implementation 'ch.qos.logback:logback-classic:1.5.29'
-    runtimeOnly 'org.postgresql:postgresql:42.7.8'
+    runtimeOnly 'org.postgresql:postgresql:42.7.10'
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:6.0.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:6.0.2'
