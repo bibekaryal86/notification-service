@@ -16,7 +16,7 @@ buildscript {
 plugins {
     id 'application'
     id 'java'
-    id 'com.diffplug.spotless' version '8.2.1'
+    id 'com.diffplug.spotless' version '8.3.0'
     id 'org.flywaydb.flyway' version '12.0.3'
 }
 
