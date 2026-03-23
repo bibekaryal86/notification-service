@@ -13,6 +13,7 @@ public class Constants {
   public static final String ENV_DB_NAME = "DB_NAME";
   public static final String ENV_DB_USER = "DB_USERNAME";
   public static final String ENV_DB_PWD = "DB_PASSWORD";
+  public static final String ENV_DB_SCHEMA = "DB_SCHEMA";
   public static final String ENV_SMTP_HOST = "SMTP_HOST";
   public static final String ENV_SMTP_PORT = "SMTP_PORT";
   public static final String ENV_SMTP_EMAIL = "SMTP_EMAIL";
@@ -27,6 +28,7 @@ public class Constants {
           ENV_DB_NAME,
           ENV_DB_USER,
           ENV_DB_PWD,
+          ENV_DB_SCHEMA,
           ENV_SMTP_HOST,
           ENV_SMTP_PORT,
           ENV_SMTP_EMAIL,

@@ -81,6 +81,7 @@ public class App {
     final String dbName = CommonUtilities.getSystemEnvProperty(Constants.ENV_DB_NAME);
     final String dbUsername = CommonUtilities.getSystemEnvProperty(Constants.ENV_DB_USER);
     final String dbPassword = CommonUtilities.getSystemEnvProperty(Constants.ENV_DB_PWD);
-    return new EmailRecordRepository(dbHost, dbName, dbUsername, dbPassword);
+    final String dbSchema = CommonUtilities.getSystemEnvProperty(Constants.ENV_DB_SCHEMA);
+    return new EmailRecordRepository(dbHost, dbName, dbUsername, dbPassword, dbSchema);
   }
 }

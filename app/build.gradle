@@ -113,7 +113,7 @@ run {
 
 flyway {
     locations = ['classpath:db/migration']
-    schemas = ['public']
+    schemas = [yamlProperties.getProperty('DB_SCHEMA')]
 
     def db_host = yamlProperties.getProperty('DB_HOST')
     def db_name = yamlProperties.getProperty('DB_NAME')
