@@ -17,9 +17,14 @@ public class EmailRecordRepository {
   private final Connection connection;
 
   public EmailRecordRepository(
-      final String dbHost, final String dbName, final String dbUsername, final String dbPassword)
+      final String dbHost,
+      final String dbName,
+      final String dbUsername,
+      final String dbPassword,
+      final String dbSchema)
       throws SQLException {
-    final String dbUrl = String.format("jdbc:postgresql://%s:5432/%s", dbHost, dbName);
+    final String dbUrl =
+        String.format("jdbc:postgresql://%s:5432/%s?currentSchema=%s", dbHost, dbName, dbSchema);
     this.connection = DriverManager.getConnection(dbUrl, dbUsername, dbPassword);
   }
 
