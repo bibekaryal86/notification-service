@@ -16,7 +16,7 @@ buildscript {
 plugins {
     id 'application'
     id 'java'
-    id 'com.diffplug.spotless' version '8.4.0'
+    id 'com.diffplug.spotless' version '8.5.0'
     id 'org.flywaydb.flyway' version '12.6.1'
 }
 
@@ -37,7 +37,7 @@ dependencies {
     // from personal library
     implementation 'io.github.bibekaryal86:shdsvc:1.0.12'
     // others
-    implementation 'io.netty:netty-all:4.2.12.Final'
+    implementation 'io.netty:netty-all:4.2.13.Final'
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.21.3'
     implementation 'com.sun.mail:jakarta.mail:2.0.2'
     implementation 'org.slf4j:slf4j-api:2.0.18'
