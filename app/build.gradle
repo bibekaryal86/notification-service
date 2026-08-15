@@ -41,7 +41,7 @@ dependencies {
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.22.1'
     implementation 'com.sun.mail:jakarta.mail:2.0.2'
     implementation 'org.slf4j:slf4j-api:2.0.18'
-    implementation 'ch.qos.logback:logback-classic:1.6.2'
+    implementation 'ch.qos.logback:logback-classic:1.6.3'
     runtimeOnly 'org.postgresql:postgresql:42.7.13'
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:6.1.3'
