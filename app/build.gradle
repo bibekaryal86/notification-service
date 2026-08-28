@@ -9,14 +9,14 @@
 buildscript {
     dependencies {
         classpath 'org.yaml:snakeyaml:2.6'
-        classpath 'org.flywaydb:flyway-database-postgresql:13.3.0'
+        classpath 'org.flywaydb:flyway-database-postgresql:13.4.0'
     }
 }
 
 plugins {
     id 'application'
     id 'java'
-    id 'com.diffplug.spotless' version '8.10.0'
+    id 'com.diffplug.spotless' version '8.10.1'
     id 'org.flywaydb.flyway' version '13.4.0'
 }
 
