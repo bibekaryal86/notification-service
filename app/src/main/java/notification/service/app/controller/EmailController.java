@@ -73,17 +73,16 @@ public class EmailController {
           HttpResponseStatus.ACCEPTED,
           String.format(Constants.SIMPLE_JSON_RESPONSE, "requestId", requestId));
 
-      CompletableFuture.runAsync(
-          () -> {
-            try {
-              emailService.sendEmail(emailRequest);
-              emailRecordRepository.update(requestId, LocalDateTime.now(), "");
-              log.info("[{}] Email sent successfully", requestId);
-            } catch (Exception ex) {
-              emailRecordRepository.update(requestId, LocalDateTime.now(), ex.getMessage());
-              log.error("[{}] Failed to send email", requestId, ex);
-            }
-          });
+      CompletableFuture.runAsync(() -> {
+        try {
+          emailService.sendEmail(emailRequest);
+          emailRecordRepository.update(requestId, LocalDateTime.now(), "");
+          log.info("[{}] Email sent successfully", requestId);
+        } catch (Exception ex) {
+          emailRecordRepository.update(requestId, LocalDateTime.now(), ex.getMessage());
+          log.error("[{}] Failed to send email", requestId, ex);
+        }
+      });
     } else {
       log.error("[{}] EmailRequest not found or invalid...", requestId);
       ServerUtils.sendResponse(

@@ -37,11 +37,11 @@ public class EmailRecordRepository {
         emailRecordEntity.getErrorMessage());
     final String sql =
         """
-            INSERT INTO email_records
-            (id, subject, has_html_body, has_text_body, has_attachments,
-             email_from, email_to, email_cc, email_bcc, received_at, sent_at, error_message)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-            """;
+        INSERT INTO email_records
+        (id, subject, has_html_body, has_text_body, has_attachments,
+         email_from, email_to, email_cc, email_bcc, received_at, sent_at, error_message)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        """;
 
     try (final PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
       preparedStatement.setString(1, emailRecordEntity.getId());
@@ -74,10 +74,10 @@ public class EmailRecordRepository {
     log.info("[{}] Update Email Record...SentAt={}, ErrorMessage={}", id, sentAt, errorMessage);
     final String sql =
         """
-            UPDATE email_records
-            SET sent_at = ?, error_message = ?
-            WHERE id = ?
-            """;
+        UPDATE email_records
+        SET sent_at = ?, error_message = ?
+        WHERE id = ?
+        """;
 
     try (final PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
       preparedStatement.setTimestamp(1, sentAt == null ? null : Timestamp.valueOf(sentAt));
